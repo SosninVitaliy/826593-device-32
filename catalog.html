@@ -69,49 +69,43 @@
             <button class="range-toggle toggle-max" type="button">
               <span class="visually-hidden">Изменить максимальную цену.</span>
             </button>
-            <label class="catalog-filter-label">
-              от <input class="catalog-filter-input" type="number" name="min-price"> ₽
-            </label>
-            <label class="catalog-filter-label">
-              до <input class="catalog-filter-input" type="number" name="max-price"> ₽
-            </label>
+            <div class="range">
+              <label for="price-min">от 0</label>
+              <input id="price-min" type="range" min="0" step="10" max="5000" value="0">
+              <label for="price-max">до 5000</label>
+              <input id="price-max" type="range" min="0" step="10" max="5000" value="5000">
+            </div>
           </fieldset>
-
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Цвет</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="black" checked>
-                  <span class="control-mark"></span>
+                  <input class="visually-hidden control-input" type="checkbox" name="color[]" value="black" checked>
               <span class="control-label">Черный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="white" checked>
-                  <span class="control-mark"></span>
+                  <input class="visually-hidden control-input" type="checkbox" name="color[]" value="white" checked>
               <span class="control-label">Белый</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="blue">
-                  <span class="control-mark"></span>
+                  <input class="visually-hidden control-input" type="checkbox" name="color[]" value="blue">
               <span class="control-label">Синий</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="red">
-                  <span class="control-mark"></span>
+                  <input class="visually-hidden control-input" type="checkbox" name="color[]" value="red">
               <span class="control-label">Красный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="pink">
-                  <span class="control-mark"></span>
+                  <input class="visually-hidden control-input" type="checkbox" name="color[]" value="pink">
                   <span class="control-label">Розовый</span>
                 </label>
               </li>
@@ -124,15 +118,13 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="exist" checked>
-                  <span class="control-mark"></span>
               <span class="control-label">Есть</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="no">
-                  <span class="control-mark"></span>
-              <span class="control-label">Нет</span>
+                  <span class="control-label">Нет</span>
                 </label>
               </li>
             </ul>
@@ -148,13 +140,9 @@
             <option value="expensive">Сначала дорогие</option>
           </select>
           <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+          <button class="visually-hidden" type="submit">С конца</button>
+          <button class="visually-hidden" type="submit">С начала</button>
         </form>
-        <a href="#" class="button button-light">
-          <span class="visually-hidden">Вверх</span>
-        </a>
-        <a href="#" class="button">
-          <span class="visually-hidden">Вниз</span>
-        </a>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="product.html">
