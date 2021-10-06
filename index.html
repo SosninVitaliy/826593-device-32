@@ -8,12 +8,13 @@
     <header class="page-header">
       <a class="header-main-logo" href="index.html">
         <img class="logo" src="#" alt="Логотип Device">
-       </a>
+      </a>
+      <form action="https://echo.htmlacademy.ru" method="post" class="search">
+        <label class="visually-hidden" for="search-input"></label>
+        <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
+      </form>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="#">Поиск по сайту</a>
-          </li>
           <li class="navigation-item">
             <a href="#">Войти</a>
           </li>
@@ -26,10 +27,8 @@
         </ul>
         <ul class="navigation-list navigation-site">
           <li class="navigation-item">
-            <a class="navigation-link catalog-link" href="catalog.html">Каталог товаров</a>
-            <button class="catalog-button" type="button">
-            <span class="visually-hidden">Развернуть меню каталога</span>
-            </button>
+            <p class="navigation-item-title">Каталог товаров</p>
+            <button class="catalog-button" type="button" aria-label="Развернуть меню каталога"></button>
           </li>
           <li class="navigation-item">
             <a href="#">Доставка</a>
@@ -45,38 +44,94 @@
     </header>
     <main class="main-index">
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
-      <section class="gallery">
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <img class="gallery-image" src="#" alt="Дрон">
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <h4 class="gallery-title">Порхает как бабочка,
-        жалит как пчела!</h4>
-        <p class="gallery-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-        </p>
-        <a class="product-details" href="">Подробнее</a>
-        <table class="product-specs">
-          <tr>
-            <td class="product-specs-key">
-              <span>Дальность полета</span>
-            </td>
-            <td class="product-specs-key">
-              <span>Радиус поражения</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="product-specs-value">
-              <span>800 м</span>
-            </td>
-            <td class="product-specs-value">
-              <span>50 м</span>
-            </td>
-          </tr>
-        </table>
-        <ol class="slider-pagination">
+      <section class="gallery-slider">
+        <div class="galery-slider-box">
+          <img class="gallery-image" src="#" alt="Дрон">
+          <h4 class="gallery-title">Порхает как бабочка,
+            жалит как пчела!</h4>
+          <p class="gallery-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a class="product-details" href="">Подробнее</a>
+          <table class="product-specs">
+            <tr>
+              <td class="product-specs-key">
+                <span>Дальность полета</span>
+              </td>
+              <td class="product-specs-key">
+                <span>Радиус поражения</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="product-specs-value">
+                <span>800 м</span>
+              </td>
+              <td class="product-specs-value">
+                <span>50 м</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="galery-slider-box">
+          <img class="gallery-image" src="#" alt="Фитнес браслет">
+          <h4 class="gallery-title">Худеем
+            правильно!</h4>
+          <p class="gallery-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+          </p>
+          <a class="product-details" href="">Подробнее</a>
+          <table class="product-specs">
+            <tr>
+              <td class="product-specs-key">
+                <span>48 часов</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="product-specs-value">
+                <span>Без подзарядки</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="galery-slider-box">
+          <img class="gallery-image" src="#" alt="Селфи палка">
+          <h4 class="gallery-title">Делай селфи,
+            как Бен Стиллер! </h4>
+          <p class="gallery-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+          </p>
+          <a class="product-details" href="">Подробнее</a>
+          <table class="product-specs">
+            <tr>
+              <td class="product-specs-key">
+                <span>8,5 м</span>
+              </td>
+              <td class="product-specs-key">
+                <span>5 кг</span>
+              </td>
+              <td class="product-specs-key">
+                <span>Карбон</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="product-specs-value">
+                <span>Длина палки</span>
+              </td>
+              <td class="product-specs-value">
+                <span>Вес палки</span>
+              </td>
+              <td class="product-specs-value">
+                <span>Материал</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="galery-slider-arrows">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </div>
+        <ol class="galery-slider-points">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current" type="button">
               <span class="visually-hidden">первый слайд</span>
@@ -142,7 +197,7 @@
             <p class="services-description">Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
-          <div>
+          </div>
           <div class="services-item">
             <h2 class="services-title">Кредит</h2>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
@@ -208,17 +263,19 @@
         <p class="footer-contect-address">Санкт-Петербург, набережная
           реки Карповки, 5, литера П.</p>
       </address>
-      <ul class="navigation-list navigation-site-footer">
-        <li class="navigation-item">
-          <a href="#">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
+      <nav class="navigation-footer">
+        <ul class="navigation-list navigation-site-footer">
+          <li class="navigation-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       <ul class="footer-social-list">
         <li class="footer-social-item">
           <a class="button" href="#">
@@ -236,7 +293,7 @@
           </a>
         </li>
       </ul>
-      <a class="contacts-phone contacts-phone-footer" href="tel:88128121212">+7 (812) 812-12-12</a>
+      <a class="contacts-phone contacts-phone-footer" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="logo-html" src="#" alt="Логотип htmlacademy"></a>
     </footer>
   </body>

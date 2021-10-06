@@ -8,12 +8,13 @@
     <header class="page-header">
       <a class="header-main-logo" href="index.html">
         <img class="logo" src="#" alt="Логотип Device">
-       </a>
+      </a>
+      <form action="https://echo.htmlacademy.ru" method="post" class="search">
+        <label class="visually-hidden" for="search-input"></label>
+        <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
+      </form>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="#">Поиск по сайту</a>
-          </li>
           <li class="navigation-item">
             <a href="#">Войти</a>
           </li>
@@ -26,10 +27,8 @@
         </ul>
         <ul class="navigation-list navigation-site">
           <li class="navigation-item">
-            <a class="navigation-link catalog-link" href="catalog.html">Каталог товаров</a>
-            <button class="catalog-button" type="button">
-            <span class="visually-hidden">Развернуть меню каталога</span>
-            </button>
+            <p class="navigation-item-title">Каталог товаров</p>
+            <button class="catalog-button" type="button" aria-label="Развернуть меню каталога"></button>
           </li>
           <li class="navigation-item">
             <a href="#">Доставка</a>
@@ -59,7 +58,10 @@
         </ul>
       </header>
       <section class="catalog-products">
-        <h4 class="catalog-products-title">фильтр:</h4>
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <aside class="catalog-products-block">
+          <p class="catalog-products-title">фильтр:</p>
+        </aside>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -131,8 +133,8 @@
           </fieldset>
           <button class="button" type="submit">Показать</button>
         </form>
-        <h4 class="catalog-products-title">сортировка:</h4>
         <form class="sorting-type">
+          <p class="catalog-products-title">сортировка:</p>
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
             <option value="popular">Сначала популярные</option>
@@ -174,33 +176,35 @@
           </li>
         </ul>
         <button class="button pagination-show-more" type="button">Загрузить еще</button>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-prev">
-              <span>Назад</span>
-            </a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">15</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span>Вперёд</span>
-            </a>
-          </li>
-        </ul>
+        <aside class="pagination-block">
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-prev">
+                <span>Назад</span>
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <button class="pagination-link" type="button">...</button>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">15</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-next" href="#">
+                <span>Вперёд</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
       </section>
     </main>
     <footer class="page-footer">
@@ -211,17 +215,19 @@
         <p class="footer-contect-address">Санкт-Петербург, набережная
           реки Карповки, 5, литера П.</p>
       </address>
-      <ul class="navigation-list navigation-site-footer">
-        <li class="navigation-item">
-          <a href="#">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
+      <nav class="navigation-footer">
+        <ul class="navigation-list navigation-site-footer">
+          <li class="navigation-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       <ul class="footer-social-list">
         <li class="footer-social-item">
           <a class="button" href="#">
@@ -239,7 +245,7 @@
           </a>
         </li>
       </ul>
-      <a class="contacts-phone contacts-phone-footer" href="tel:88128121212">+7 (812) 812-12-12</a>
+      <a class="contacts-phone contacts-phone-footer" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="logo-html" src="#" alt="Логотип htmlacademy"></a>
     </footer>
   </body>
