@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -63,12 +64,6 @@
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
-              <button class="range-toggle toggle-min" type="button">
-                <span class="visually-hidden">Изменить минимальную цену.</span>
-              </button>
-              <button class="range-toggle toggle-max" type="button">
-                <span class="visually-hidden">Изменить максимальную цену.</span>
-              </button>
               <div class="range">
                 <label for="price-min">от 0</label>
                 <input id="price-min" type="range" min="0" step="10" max="5000" value="0">
@@ -117,7 +112,7 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group" value="exist" checked>
-                <span class="control-label">Есть</span>
+                    <span class="control-label">Есть</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
@@ -141,9 +136,13 @@
           <noscript>
             <button class="button-sorting-noscript" type="submit">Отсортировать продукты</button>
           </noscript>
-          <input class="visually-hidden button-up" type="radio" name="button-arrow" value="up">
-          <input class="visually-hidden button-down" type="radio" name="button-arrow" value="down">
-        </form>
+          <label class="sort-direction sort-direction-ascending">
+            <input class="visually-hidden button-up" type="radio" name="sort-direction" value="ascending">
+          </label>
+          <label class="sort-direction sort-direction-descending">
+            <input class="visually-hidden button-down" type="radio" name="sort-direction" value="descending">
+          </label>
+          </form>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="product.html">
