@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="page-header">
       <a class="header-main-logo" href="index.html">
-        <img class="logo" src="img/device-logo.svg" width="145" height="36" alt="Логотип Device">
+        <img class="logo-header" src="img/device-logo.svg" width="145" height="36" alt="Логотип Device">
       </a>
       <nav class="navigation">
         <form class="search" action="https://echo.htmlacademy.ru">
+          <button class="visually-hidden search-btn" type="submit">Найти</button>
           <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
         </form>
         <ul class="navigation-list">
@@ -60,14 +61,16 @@
       <section class="catalog-products">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <aside class="catalog-products-block">
-          <h3 class="catalog-products-title">фильтр:</h3>
+          <div class="catalog-products-title-header">
+            <h3 class="catalog-products-title">фильтр:</h3>
+          </div>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
               <div class="range">
-                <label for="price-min">от 0</label>
+                <label class="range-numeral" for="price-min">от 0</label>
                 <input id="price-min" type="range" min="0" step="10" max="5000" value="0">
-                <label for="price-max">до 5000</label>
+                <label class="range-numeral" for="price-max">до 5000</label>
                 <input id="price-max" type="range" min="0" step="10" max="5000" value="5000">
               </div>
             </fieldset>
@@ -123,7 +126,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <button class="catalog-filter-button" type="submit">Показать</button>
           </form>
         </aside>
         <form class="sorting-type" action="https://echo.htmlacademy.ru">
@@ -142,7 +145,7 @@
           <label class="sort-direction sort-direction-descending">
             <input class="visually-hidden button-down" type="radio" name="sort-direction" value="descending">
           </label>
-          </form>
+        </form>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="product.html">
@@ -173,7 +176,7 @@
             <b class="product-card-price">4 900 ₽</b>
           </li>
         </ul>
-        <button class="button pagination-show-more" type="button">Загрузить еще</button>
+        <button class="pagination-show-more-button" type="button">Загрузить еще</button>
         <nav class="pagination-block">
           <ul class="pagination">
             <li class="pagination-item">
@@ -182,19 +185,19 @@
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">1</a>
+              <a class="pagination-link-number" href="#">1</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link-number" href="#">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="pagination-link-number" href="#">3</a>
             </li>
             <li class="pagination-item">
-              <button class="pagination-link" type="button">...</button>
+              <button class="pagination-link-number pagination-link-number-unlock" type="button">...</button>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">15</a>
+              <a class="pagination-link-number" href="#">15</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link pagination-next" href="#">
@@ -244,9 +247,7 @@
         </li>
       </ul>
       <a class="contacts-phone contacts-phone-footer" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img class="logo-html" src="img/html-academy.svg" width="115" height="34" alt="Логотип htmlacademy">
-      </a>
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="logo-html" src="#" alt="Логотип htmlacademy"></a>
     </footer>
   </body>
   </html>
