@@ -65,7 +65,7 @@ li {
 }
 
 .navigation-site {
-  font-family: "raleway", sans-serif;;
+  font-family: "raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
   font-size: inherit;
@@ -73,10 +73,22 @@ li {
 
     /* main */
 
-.gallery-number {
+.galery-slider-box::before {
   font-weight: 800;
   font-size: 180px;
   color: #FFE17F;
+}
+
+.galery-slider-box:nth-child(1)::before {
+  content: "01";
+}
+
+.galery-slider-box:nth-child(2)::before {
+  content: "02";
+}
+
+.galery-slider-box:nth-child(3)::before {
+  content: "03";
 }
 
 .gallery-title {
